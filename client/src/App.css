@@ -1,5 +1,5 @@
 :root {
-  --yellow: #f5c32c;
+  --yellow: yellow;
   --orange: #fca61f;
   --black: #000;
   --blue: #185a9d;
@@ -9,7 +9,7 @@
   --hrColor: #cfcdcd;
   --cardColor: rgba(255, 255, 255, 0.64);
   --buttonBg: linear-gradient(106.23deg, #43cea2 0%, #185a9d 100%);
-  --buttonBgHover: linear-gradient(106.23deg, #43cea2 0%, #185a9d 0%);
+  --buttonBgHover: #185a9d;
   --inputColor: rgba(40, 52, 62, 0.07);
   --photo: #4CB256;
   --video: #4A4EB7;

@@ -1,0 +1,21 @@
+Needed features
+
+Change Like to not include self
+Add comment Functionality
+Add Share Functionality
+Add Settings Page
+
+Implement Notifications
+Implement Search Functionality
+Implement Location sharing
+Implement Schedule sharing
+Implement tooltips on hover
+Implement Dynamic Trends
+Implement Darkmode
+Implement Delete Post
+Implement Messaging 
+
+Make Whole App Reactive
+Add follow buttons for trends
+Add Bio Section to Profile
+Change Profile pictures to default for all upon profile creation
