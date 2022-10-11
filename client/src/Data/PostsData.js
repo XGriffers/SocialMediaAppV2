@@ -9,14 +9,18 @@ export const PostsData = [
         name: 'Tzuyu',
         desc: "Happy New Year all friends! #2023",
         likes: 2300,
-        liked: true
+        liked: true,
+        dislikes: 10,
+        disliked:false
     },
     {
         img: postPic2,
         name: 'Maryam',
         desc: "Party time :)",
         likes: 2300,
-        liked: false
+        liked: false,
+        dislikes: 10,
+        disliked:false
 
     },
     {
@@ -24,6 +28,8 @@ export const PostsData = [
         name: "Salena Gomez",
         desc: "At Archery Festival",
         likes: 800,
-        liked: false
+        liked: false,
+        dislikes: 10,
+        disliked:false
     }
 ]
