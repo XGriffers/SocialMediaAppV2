@@ -1,4 +1,6 @@
+
 import "./App.css";
+
 import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Auth from "./pages/Auth/Auth";
@@ -9,6 +11,7 @@ import Chat from "./pages/Chat/Chat";
 
 
 function App() {
+
   const user = useSelector((state) => state.authReducer.authData);
   return (
     <div
@@ -19,6 +22,8 @@ function App() {
             ? "calc(100vh - 2rem)"
             : "auto",
       }}
+      
+      
     >
       <Routes>
         <Route
@@ -53,6 +58,8 @@ function App() {
         />
       </Routes>
     </div>
+
+
   );
 }
 

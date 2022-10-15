@@ -17,10 +17,7 @@ const NavIcons = () => {
   const dispatch = useDispatch()
   return (
     <div className="navIcons">
-
-
       <img src={Settings} alt="" />
-
 
       <img src={Noti} alt="" />
 
@@ -28,11 +25,15 @@ const NavIcons = () => {
         <img src={Message} alt="" />
       </Link>
 
+
       <Link to={'../auth'}>
         <img src={SignOut} onClick={handleLogOut} alt="" />
       </Link>
+
+
     </div >
   );
+
 
 };
 

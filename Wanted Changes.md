@@ -12,7 +12,7 @@ Implement Location sharing
 Implement Schedule sharing
 Implement tooltips on hover
 Implement Dynamic Trends
-Implement Darkmode
+Implement Darkmode <--
 Implement Delete Post
 Implement Messaging 
 
