@@ -10,6 +10,7 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
   const [userData, setUserData] = useState(null);
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
+  const scroll = useRef();
 
   const handleChange = (newMessage) => {
     setNewMessage(newMessage)
@@ -47,7 +48,7 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
 
   // Always scroll to last Message
   useEffect(() => {
-    scroll.current?.scrollIntoView({ behavior: "smooth" });
+    scroll.current?.scrollIntoView({ behavior: "smooth" })
   }, [messages])
 
 
@@ -56,11 +57,12 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
   const handleSend = async (e) => {
     e.preventDefault()
     const message = {
+      chatId: chat._id,
       senderId: currentUser,
       text: newMessage,
-      chatId: chat._id,
     }
     const receiverId = chat.members.find((id) => id !== currentUser);
+
     // send message to socket server
     setSendMessage({ ...message, receiverId })
     // send message to database
@@ -75,7 +77,7 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
     }
   }
 
-  // Receive Message from parent component
+  // receive Message from parent component
   useEffect(() => {
     console.log("Message Arrived: ", receivedMessage)
     if (receivedMessage !== null && receivedMessage.chatId === chat._id) {
@@ -84,10 +86,8 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
 
   }, [receivedMessage])
 
-
-
-  const scroll = useRef();
   const imageRef = useRef();
+
   return (
     <>
       <div className="ChatBox-container">
@@ -128,7 +128,7 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
             <div className="chat-body" >
               {messages.map((message) => (
                 <>
-                  <div ref={scroll}
+                  <div ref = {scroll}
                     className={
                       message.senderId === currentUser
                         ? "message own"
@@ -137,6 +137,7 @@ const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {
                   >
                     <span>{message.text}</span>{" "}
                     <span>{format(message.createdAt)}</span>
+
                   </div>
                 </>
               ))}
