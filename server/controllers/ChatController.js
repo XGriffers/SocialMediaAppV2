@@ -33,3 +33,13 @@ export const findChat = async (req, res) => {
     res.status(500).json(error)
   }
 };
+export const deleteChat = async (req, res) => {
+  try {
+    const chat = await ChatModel.deleteOne({
+      members: { $all: [req.params.firstId, req.params.secondId] },
+    });
+    res.status(200).json(chat)
+  } catch (error) {
+    res.status(500).json(error)
+  }
+};
