@@ -14,7 +14,7 @@ Implement tooltips on hover
 Implement Dynamic Trends
 Implement Darkmode <--
 Implement Delete Post
-Implement Messaging 
+Implement finding other members to start conversations
 
 Make Whole App Reactive
 Add follow buttons for trends
