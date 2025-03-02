@@ -1,5 +1,5 @@
 :root {
-  --yellow: #f5c32c;
+  --yellow: yellow;
   --orange: #fca61f;
   --black: #000;
   --blue: #185a9d;
@@ -9,6 +9,7 @@
   --hrColor: #cfcdcd;
   --cardColor: rgba(255, 255, 255, 0.64);
   --buttonBg: linear-gradient(106.23deg, #43cea2 0%, #185a9d 100%);
+  --buttonBgHover: #185a9d;
   --inputColor: rgba(40, 52, 62, 0.07);
   --photo: #4CB256;
   --video: #4A4EB7;
@@ -20,18 +21,9 @@
   overflow: hidden;
   color: var(--black);
   background: #f3f3f3;
-  padding: 1rem 1rem;
+  padding: 1rem 15rem;
 }
 
-/* blur */
-.blur {
-  position: absolute;
-  width: 22rem;
-  height: 14rem;
-  border-radius: 50%;
-  background: #a6ddf0;
-  filter: blur(72px);
-}
 
 .button {
   display: flex;
@@ -39,16 +31,16 @@
   justify-content: center;
   color: white;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   background: var(--buttonBg);
   transition: all 100ms ease-out;
 }
 
 .button:hover {
-  color: var(--orange);
-  border: 2px solid var(--orange);
+  color: var(--white);
   cursor: pointer;
-  background: transparent;
+  background: var(--buttonBgHover);
+  transition: ease-in-out;
 }
 
 .button:disabled {

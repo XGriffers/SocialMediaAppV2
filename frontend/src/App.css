@@ -1,0 +1,81 @@
+:root {
+  --yellow: yellow; /* duh */
+  --orange: #fca61f;
+  --black: #000;
+  --blue: #185a9d;
+  --white: #fff;
+  --gray: #666; /* close enough */
+  --profileShadow: 0 4px 17px 2px rgba(0, 0, 0, 0.25);
+  --hrColor: #cfcdcd;
+  --cardColor: #fff; /* just white */
+  --buttonBg: linear-gradient(106deg, #43cea2 0%, #185a9d 100%);
+  --buttonBgHover: #185a9d;
+  --inputColor: #ececec; /* light gray ish */
+  --photo: #4CB256;
+  --video: #4A4EB7;
+  --location: #EF5757;
+  --schedule: #E1AE4A;
+}
+
+.App {
+  overflow: hidden;
+  color: #000;
+  background: #f3f3f3; /* light gray bg */
+  padding: 1rem 15rem; /* big ol padding */
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  background: var(--buttonBg);
+  transition: all 100ms ease-out; /* quick switch */
+}
+
+.button:hover {
+  color: #fff;
+  cursor: pointer;
+  background: #185a9d; /* hardcode hover */
+}
+
+.button:disabled {
+  background: silver;
+  pointer-events: none; /* no clicking */
+}
+
+::-webkit-scrollbar {
+  display: none; /* bye scrollbars */
+}
+
+.infoForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.infoInput {
+  border: none;
+  outline: none;
+  background: #ececec;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+}
+
+.infoForm>div {
+  display: flex;
+  gap: 1rem;
+  height: 2rem;
+  width: 90%;
+}
+
+.infoButton {
+  width: 6rem;
+  height: 2rem;
+  align-self: flex-end;
+}

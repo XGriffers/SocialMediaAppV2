@@ -80,6 +80,23 @@ export const likePost = async (req, res) => {
   }
 };
 
+export const dislikePost = async (req, res) => {
+  const id = req.params.id;
+  const { userId } = req.body;
+  try {
+    const post = await PostModel.findById(id);
+    if (post.dislikes.includes(userId)) {
+      await post.updateOne({ $pull: { dislikes: userId } });
+      res.status(200).json("Post disliked");
+    } else {
+      await post.updateOne({ $push: { dislikes: userId } });
+      res.status(200).json("Post disliked");
+    }
+  } catch (error) {
+    res.status(500).json(error);
+  }
+};
+
 // Get timeline posts
 export const getTimelinePosts = async (req, res) => {
   const userId = req.params.id

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Modal, useMantineTheme } from "@mantine/core";
+
 import "./ProfileModal.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { uploadImage } from "../../actions/UploadAction";
 import { updateUser } from "../../actions/UserAction";
+
 
 const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
   const theme = useMantineTheme();
@@ -70,7 +72,7 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
       }
       overlayOpacity={0.55}
       overlayBlur={3}
-      size="55%"
+      size="35%"
       opened={modalOpened}
       onClose={() => setModalOpened(false)}
     >
@@ -129,9 +131,9 @@ const ProfileModal = ({ modalOpened, setModalOpened, data }) => {
           <input
             value={formData.relationship}
             onChange={handleChange}
-            type="text"
+            component="select"
             className="infoInput"
-            placeholder="Relationship status"
+            placeholder="Relationship Status"
             name="relationship"
           />
         </div>

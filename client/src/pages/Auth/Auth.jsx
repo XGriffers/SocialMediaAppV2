@@ -56,7 +56,7 @@ const Auth = () => {
         <img src={Logo} alt="" />
 
         <div className="Webname">
-          <h1>Social Media App V2</h1>
+          <h1>Social Media App</h1>
           {/* <h6>Explore the ideas throughout the world</h6> */}
         </div>
       </div>
@@ -89,6 +89,20 @@ const Auth = () => {
             </div>
           )}
 
+          {isSignUp && (
+            <div>
+              <input
+                required
+                type="email"
+                className="infoInput"
+                name="email"
+                placeholder="Email"
+                value={data.email}
+                onChange={handleChange}
+              />
+            </div>
+          )}
+
           <div>
             <input
               required
@@ -100,20 +114,8 @@ const Auth = () => {
               onChange={handleChange}
             />
           </div>
-          <div>
-            {isSignUp && (
-              <input
-                required
-                type="email"
-                className="infoInput"
-                name="email"
-                placeholder="Email"
-                value={data.email}
-                onChange={handleChange}
-              />
 
-            )}
-          </div>
+
 
           <div>
             <input
@@ -149,7 +151,7 @@ const Auth = () => {
               display: confirmPass ? "none" : "block",
             }}
           >
-            *Confirm password is not same
+            *Passwords Must Match
           </span>
           <div>
             <span
@@ -164,8 +166,8 @@ const Auth = () => {
               }}
             >
               {isSignUp
-                ? "Already have an account Login"
-                : "Don't have an account Sign up"}
+                ? "Already have an account? Login."
+                : "Need an account? Sign Up."}
             </span>
             <button
               className="button infoButton"

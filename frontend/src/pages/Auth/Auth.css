@@ -1,0 +1,47 @@
+.Auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 4rem;
+  position: relative; /* dunno why but sure */
+}
+
+.Auth>div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a-left {
+  gap: 1rem;
+}
+
+.a-left>img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.Webname>h1 {
+  font-size: 3rem;
+  background: linear-gradient(98deg, #24e4f0 0%, #358ff9 100%); /* shiny */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Webname>h6 {
+  font-size: 0.85rem;
+}
+
+.authForm {
+  background: #fff; /* plain white */
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.authForm>div {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
